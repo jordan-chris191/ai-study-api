@@ -5,7 +5,7 @@ const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY,
 });
 
-const MODEL = "gemini-2.5-flash";
+const MODEL = "gemini-2.5-flash-lite";
 
 // Tune generation behavior per task instead of using one setting for everything.
 // Lower temperature = more consistent/structured output (quiz, summary).
