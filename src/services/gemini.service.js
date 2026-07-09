@@ -243,7 +243,8 @@ export async function createQuiz(text) {
   let payload;
   try {
     payload = JSON.parse(raw);
-  } catch {
+  } catch  (err) {
+    console.error("JSON parse failed. Raw output:", raw.slice(0, 500));
     throw new AppError("Quiz generation returned invalid JSON. Try again.", 500);
   }
 
